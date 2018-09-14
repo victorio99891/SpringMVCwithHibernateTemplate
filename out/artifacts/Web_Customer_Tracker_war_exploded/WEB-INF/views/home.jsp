@@ -8,13 +8,11 @@
     <script src="${pageContext.request.contextPath}/resources/script/test.js"></script>
 </head>
 <body>
-<span class="mySpan">Hello home page!</span><br/>
+<h1>Hello world!</h1>
 
 
-<form:form modelAttribute="user" action="form">
-    Type name: <form:input path="name"/>
-    <button type="submit">Submit!</button>
-</form:form>
+<a href="/customer/list">Customer list!</a>
+
 
 </body>
 </html>

@@ -8,6 +8,10 @@
     <script src="${pageContext.request.contextPath}/resources/script/test.js"></script>
 </head>
 <body>
+<h1>Hello world!</h1>
+
+
+<a href="/customer/list">Customer list!</a>
 
 
 </body>
