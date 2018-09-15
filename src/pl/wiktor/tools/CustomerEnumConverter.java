@@ -17,8 +17,6 @@ public class CustomerEnumConverter {
             case "email":
                 customerEnum = CustomerEnum.EMAIL;
                 break;
-            default:
-                customerEnum = CustomerEnum.FIRST_NAME;
         }
         return customerEnum;
     }

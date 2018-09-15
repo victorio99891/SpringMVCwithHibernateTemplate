@@ -23,15 +23,31 @@
         </a>
         <table>
             <tr>
-                <th>First Name <a href="/customer/list/first_name/asc"><i class="arrow up"></i></a> <a href="/customer/list/first_name/desc"><i class="arrow down"></i></a></th>
-                <th>Last Name <a href="/customer/list/last_name/asc"><i class="arrow up"></i></a> <a href="/customer/list/last_name/desc"><i class="arrow down"></i></a></th>
-                <th>Email Name <a href="/customer/list/email/asc"><i class="arrow up"></i></a> <a href="/customer/list/email/desc"><i class="arrow down"></i></a></th>
+                <th>First Name <a href="/customer/list/first_name/asc"><i class="arrow up"></i></a> <a
+                        href="/customer/list/first_name/desc"><i class="arrow down"></i></a></th>
+                <th>Last Name <a href="/customer/list/last_name/asc"><i class="arrow up"></i></a> <a
+                        href="/customer/list/last_name/desc"><i class="arrow down"></i></a></th>
+                <th>Email Name <a href="/customer/list/email/asc"><i class="arrow up"></i></a> <a
+                        href="/customer/list/email/desc"><i class="arrow down"></i></a></th>
+                <th>Action</th>
             </tr>
-            <c:forEach var="thempCustomer" items="${customers}">
+            <c:forEach var="tempCustomer" items="${customers}">
+
+                <c:url var="updateLink" value="/customer/showFormUpdate">
+                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                </c:url>
+
+                <c:url var="deleteLink" value="/customer/deleteCustomer">
+                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                </c:url>
+
                 <tr>
-                    <td>${thempCustomer.first_name}</td>
-                    <td>${thempCustomer.last_name}</td>
-                    <td>${thempCustomer.email}</td>
+                    <td>${tempCustomer.first_name}</td>
+                    <td>${tempCustomer.last_name}</td>
+                    <td>${tempCustomer.email}</td>
+                    <td><a href="${updateLink}">Update</a> | <a href="${deleteLink}"
+                                                              onclick="if (!(confirm('Are you sure to delete this user?\n       Name: ${tempCustomer.first_name}\nLast name: ${tempCustomer.last_name}\n        Email: ${tempCustomer.email}'))) return false;">Delete</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

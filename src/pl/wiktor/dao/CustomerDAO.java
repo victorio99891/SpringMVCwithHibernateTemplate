@@ -12,6 +12,9 @@ public interface CustomerDAO {
 
     List<Customer> getSortedCustomers(CustomerEnum customerEnum, OrderingEnum orderEnum);
 
+    Customer getCustomer(int id);
+
     void saveCustomer(Customer customer);
 
+    void deleteUser(int id);
 }

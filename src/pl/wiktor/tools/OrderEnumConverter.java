@@ -12,8 +12,6 @@ public class OrderEnumConverter {
             case "desc":
                 returned_enum = OrderingEnum.DESC;
                 break;
-            default:
-                returned_enum = OrderingEnum.ASC;
         }
         return returned_enum;
     }

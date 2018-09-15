@@ -9,5 +9,7 @@ import java.util.List;
 public interface CustomerService {
     List<Customer> getCustomers();
     List<Customer> getSortedCustomers(CustomerEnum customerEnum, OrderingEnum orderEnum);
+    Customer getCustomer(int id);
+    void deleteCustomer(int id);
     void saveCustomer(Customer customer);
 }
