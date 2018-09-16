@@ -13,6 +13,48 @@ table {
     width: 72%;
 }
 
+a {
+    text-decoration: none;
+}
+
+#headTableRow {
+    height: 70px;
+}
+
+#searchBar {
+    margin-bottom: 0;
+}
+
+.searchClass {
+    font-size: 25px;
+}
+
+.searchClass:focus {
+    background-color: rgb(178, 255, 214);
+}
+
+.showOnPage {
+    font-size: 25px;
+}
+
+.showOnPage:focus {
+    background-color: rgb(178, 255, 214);
+}
+
+.showOnPage:after {
+    background-color: #ffa9af;
+}
+
+.pageNumbers {
+    text-decoration: none;
+    color: blue;
+    margin-right: -15px;
+}
+
+.pageNumbers:hover {
+    color: red;
+}
+
 th {
     border-bottom: 1px solid gray;
     background: none repeat scroll 0 0 #057a26;
@@ -22,8 +64,12 @@ th {
 
 tr {
     border-top: 1px solid gray;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
+}
+
+td {
+    padding-left: 20px;
 }
 
 tr:nth-child(even) {

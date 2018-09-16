@@ -55,7 +55,13 @@
     <div style="clear: both"></div>
 
     <p>
-        <a href="/customer/list">
+        <c:url var="paginatedList" value="/customer/pagination">
+            <c:param name="pageNumber" value="1"/>
+            <c:param name="showOnPage" value="5"/>
+            <c:param name="orderBy" value="last_name"/>
+            <c:param name="direction" value="asc"/>
+        </c:url>
+        <a href="${paginatedList}">
             <button class="add-button">Back to list!</button>
         </a>
     </p>

@@ -17,4 +17,12 @@ public interface CustomerDAO {
     void saveCustomer(Customer customer);
 
     void deleteUser(int id);
+
+    Long getNumberOfCustomers();
+
+    List<Customer> getCustomersInRange(int beginIndex, int lastIndex);
+
+    List<Customer> getSortedPaginatedCustomers(CustomerEnum customerEnum, OrderingEnum orderEnum, int beginIndex, int lastIndex);
+
+    List<Customer> getSearchResultCustomers(String constructedQuery);
 }

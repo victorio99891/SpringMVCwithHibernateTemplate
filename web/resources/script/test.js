@@ -1,1 +1,1 @@
-console.log("Hello!");
+console.log("test.js script loaded");

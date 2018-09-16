@@ -50,4 +50,35 @@ public class CustomerDAOImpl implements CustomerDAO {
         Session currentSession = sessionFactory.getCurrentSession();
         currentSession.delete(currentSession.get(Customer.class, id));
     }
+
+    @Override
+    public Long getNumberOfCustomers() {
+        Session currentSession = sessionFactory.getCurrentSession();
+        return (Long) currentSession.createQuery("select count (cus.id) from Customer cus").uniqueResult();
+    }
+
+    @Override
+    public List<Customer> getCustomersInRange(int beginIndex, int lastIndex) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        Query<Customer> query = currentSession.createQuery("from Customer", Customer.class);
+        query.setFirstResult(beginIndex);
+        query.setMaxResults(lastIndex);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<Customer> getSortedPaginatedCustomers(CustomerEnum customerEnum, OrderingEnum orderingEnum, int beginIndex, int lastIndex) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        Query<Customer> theQuery = currentSession.createQuery("from Customer order by " + customerEnum.toString().toLowerCase() + " " + orderingEnum.toString().toLowerCase(), Customer.class);
+        theQuery.setFirstResult(beginIndex);
+        theQuery.setMaxResults(lastIndex);
+        return theQuery.getResultList();
+    }
+
+    @Override
+    public List<Customer> getSearchResultCustomers(String constructedQuery) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        Query<Customer> customersList = currentSession.createQuery(constructedQuery, Customer.class);
+        return customersList.getResultList();
+    }
 }

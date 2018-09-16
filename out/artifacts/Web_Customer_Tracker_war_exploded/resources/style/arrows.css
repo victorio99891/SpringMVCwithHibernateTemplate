@@ -7,6 +7,9 @@ i {
     cursor: pointer;
 }
 
+#firstNameArrowUp {
+}
+
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);

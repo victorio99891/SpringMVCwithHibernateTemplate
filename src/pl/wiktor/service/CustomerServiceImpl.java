@@ -47,4 +47,27 @@ public class CustomerServiceImpl implements CustomerService {
         return customerDAO.getCustomer(id);
     }
 
+    @Override
+    @Transactional
+    public Long getNumberOfCustomers() {
+        return customerDAO.getNumberOfCustomers();
+    }
+
+    @Override
+    @Transactional
+    public List<Customer> getSortedPaginatedCustomers(CustomerEnum customerEnum, OrderingEnum orderEnum, int beginIndex, int lastIndex) {
+        return customerDAO.getSortedPaginatedCustomers(customerEnum, orderEnum, beginIndex, lastIndex);
+    }
+
+    @Override
+    @Transactional
+    public List<Customer> getCustomersInRange(int beginIndex, int lastIndex) {
+        return customerDAO.getCustomersInRange(beginIndex, lastIndex);
+    }
+
+    @Override
+    @Transactional
+    public List<Customer> getSearchResultCustomers(String constructedQuery) {
+        return customerDAO.getSearchResultCustomers(constructedQuery);
+    }
 }
