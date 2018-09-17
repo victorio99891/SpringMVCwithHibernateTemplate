@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="WebCustomerTracker">
+  <database-model serializer="dbm" rdbms="H2" format-version="4.11">
+    <root id="1">
+      <ServerVersion>1.4.196</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="DATABASE">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="5" parent="4" name="CUSTOMER"/>
+    <column id="6" parent="5" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_1583128E_9813_40FE_8E3C_24F3C69812A9)</DefaultExpression>
+    </column>
+    <column id="7" parent="5" name="FIRST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="8" parent="5" name="LAST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <column id="9" parent="5" name="EMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+    </column>
+    <index id="10" parent="5" name="PRIMARY_KEY_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="11" parent="5" name="CONSTRAINT_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

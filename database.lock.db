@@ -1,0 +1,6 @@
+#FileLock
+#Mon Sep 17 11:23:04 CEST 2018
+server=192.168.56.1\:51284
+hostName=WIKOR-BIURKO
+method=file
+id=165e6d712ae462ab359f933dbfb63349ff973220fec
