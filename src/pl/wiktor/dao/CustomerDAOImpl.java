@@ -58,15 +58,6 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getCustomersInRange(int beginIndex, int lastIndex) {
-        Session currentSession = sessionFactory.getCurrentSession();
-        Query<Customer> query = currentSession.createQuery("from Customer", Customer.class);
-        query.setFirstResult(beginIndex);
-        query.setMaxResults(lastIndex);
-        return query.getResultList();
-    }
-
-    @Override
     public List<Customer> getSortedPaginatedCustomers(CustomerEnum customerEnum, OrderingEnum orderingEnum, int beginIndex, int lastIndex) {
         Session currentSession = sessionFactory.getCurrentSession();
         Query<Customer> theQuery = currentSession.createQuery("from Customer order by " + customerEnum.toString().toLowerCase() + " " + orderingEnum.toString().toLowerCase(), Customer.class);

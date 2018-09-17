@@ -61,13 +61,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     @Transactional
-    public List<Customer> getCustomersInRange(int beginIndex, int lastIndex) {
-        return customerDAO.getCustomersInRange(beginIndex, lastIndex);
-    }
-
-    @Override
-    @Transactional
     public List<Customer> getSearchResultCustomers(String constructedQuery) {
         return customerDAO.getSearchResultCustomers(constructedQuery);
     }
+
+
 }

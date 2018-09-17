@@ -11,14 +11,14 @@
       <user-name>springstudent</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="WebCustomerTracker" uuid="06de4843-0b5b-4ffe-b304-421ae70b846b">
+    <data-source name="WEBTRACKERH2" uuid="d4f2eb17-a1eb-4382-a4f0-7e2546893825">
       <database-info product="H2" version="1.4.196 (2017-06-10)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.196 (2017-06-10)" family="H2" exact-version="1.4.196">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
       <user-name>sa</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
     </data-source>
   </component>
 </project>

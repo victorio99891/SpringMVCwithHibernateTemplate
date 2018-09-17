@@ -17,7 +17,7 @@
 </div>
 
 <div id="container">
-    <span id="content">
+    <div id="content">
         You searched for: <span style="color: #ff0100">"${searchBar.searchWord}"</span><span style="font-size: 15px">[field: ${searchBar.searchBy}, found results:&nbsp;</span><span
             style="color: red; font-size: 20px">${customers.size()}</span><span style="font-size: 15px">]</span>
 
@@ -39,16 +39,16 @@
                 </c:url>
 
                 <tr>
-                    <td>${tempCustomer.first_name}</td>
-                    <td>${tempCustomer.last_name}</td>
-                    <td>${tempCustomer.email}</td>
+                    <td class="searchFirstName">${tempCustomer.first_name}</td>
+                    <td class="searchLastName">${tempCustomer.last_name}</td>
+                    <td class="seachEmail">${tempCustomer.email}</td>
                     <td><a href="${updateLink}">Update</a> | <a href="${deleteLink}"
                                                                 onclick="if (!(confirm('Are you sure to delete this user?\n       Name: ${tempCustomer.first_name}\nLast name: ${tempCustomer.last_name}\n        Email: ${tempCustomer.email}'))) return false;">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
-    </span>
+    </div>
 </div>
 
 
@@ -63,5 +63,6 @@
     <button class="add-button">Go to all customers!</button>
 </a>
 <script src="${pageContext.request.contextPath}/resources/script/colorSortingArrows.js"></script>
+<script src="${pageContext.request.contextPath}/resources/script/search-color.js"></script>
 </body>
 </html>

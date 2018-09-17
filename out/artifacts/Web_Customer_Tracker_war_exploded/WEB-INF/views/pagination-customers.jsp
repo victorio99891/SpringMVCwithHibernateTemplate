@@ -18,27 +18,28 @@
 
 <div id="container">
     <div id="content">
-        <a href="/customer/showFormAdd">
+        <c:url var="showFormAdd_link" value="/customer/showFormAdd"/>
+        <a href="${showFormAdd_link}">
             <button class="add-button">Add customer</button>
         </a>
         <form:select path="showOnPage" cssClass="showOnPage" onchange="location = this.value">
             <form:option value="" label="Results number"/>
             <c:url var="show5_link" value="/customer/pagination">
-                <c:param name="pageNumber" value="${currentPage}"/>
+                <c:param name="pageNumber" value="1"/>
                 <c:param name="showOnPage" value="5"/>
                 <c:param name="orderBy" value="${orderBy}"/>
                 <c:param name="direction" value="${direction}"/>
             </c:url>
             <form:option value="${show5_link}" label="5"/>
             <c:url var="show10_link" value="/customer/pagination">
-                <c:param name="pageNumber" value="${currentPage}"/>
+                <c:param name="pageNumber" value="1"/>
                 <c:param name="showOnPage" value="10"/>
                 <c:param name="orderBy" value="${orderBy}"/>
                 <c:param name="direction" value="${direction}"/>
             </c:url>
             <form:option value="${show10_link}" label="10"/>
             <c:url var="show15_link" value="/customer/pagination">
-                <c:param name="pageNumber" value="${currentPage}"/>
+                <c:param name="pageNumber" value="1"/>
                 <c:param name="showOnPage" value="15"/>
                 <c:param name="orderBy" value="${orderBy}"/>
                 <c:param name="direction" value="${direction}"/>

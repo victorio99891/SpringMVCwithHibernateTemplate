@@ -21,7 +21,7 @@ public interface CustomerService {
 
     Long getNumberOfCustomers();
 
-    List<Customer> getCustomersInRange(int beginIndex, int lastIndex);
-
     List<Customer> getSearchResultCustomers(String constructedQuery);
+
+
 }

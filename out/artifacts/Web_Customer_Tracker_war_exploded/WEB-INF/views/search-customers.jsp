@@ -39,9 +39,9 @@
                 </c:url>
 
                 <tr>
-                    <td>${tempCustomer.first_name}</td>
-                    <td>${tempCustomer.last_name}</td>
-                    <td>${tempCustomer.email}</td>
+                    <td class="searchFirstName">${tempCustomer.first_name}</td>
+                    <td class="searchLastName">${tempCustomer.last_name}</td>
+                    <td class="seachEmail">${tempCustomer.email}</td>
                     <td><a href="${updateLink}">Update</a> | <a href="${deleteLink}"
                                                                 onclick="if (!(confirm('Are you sure to delete this user?\n       Name: ${tempCustomer.first_name}\nLast name: ${tempCustomer.last_name}\n        Email: ${tempCustomer.email}'))) return false;">Delete</a>
                     </td>
@@ -63,5 +63,6 @@
     <button class="add-button">Go to all customers!</button>
 </a>
 <script src="${pageContext.request.contextPath}/resources/script/colorSortingArrows.js"></script>
+<script src="${pageContext.request.contextPath}/resources/script/search-color.js"></script>
 </body>
 </html>

@@ -20,9 +20,8 @@ public interface CustomerDAO {
 
     Long getNumberOfCustomers();
 
-    List<Customer> getCustomersInRange(int beginIndex, int lastIndex);
-
     List<Customer> getSortedPaginatedCustomers(CustomerEnum customerEnum, OrderingEnum orderEnum, int beginIndex, int lastIndex);
 
     List<Customer> getSearchResultCustomers(String constructedQuery);
+
 }
